@@ -56,6 +56,13 @@ class AjukanSewa extends StatelessWidget {
                     fontSize: 16,
                     color: Colors.grey,
                   ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      width: 1,
+                      color: Colors.black,
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(15))
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(15))
                   ),
@@ -81,6 +88,13 @@ class AjukanSewa extends StatelessWidget {
                   hintStyle: TextStyle(
                     fontSize: 16,
                     color: Colors.grey,
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      width: 1,
+                      color: Colors.black,
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(15))
                   ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(15))
@@ -108,6 +122,13 @@ class AjukanSewa extends StatelessWidget {
                     fontSize: 16,
                     color: Colors.grey,
                   ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      width: 1,
+                      color: Colors.black,
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(15))
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(15))
                   ),
@@ -118,39 +139,45 @@ class AjukanSewa extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Colors.transparent, // Set the background color to transparent
-        elevation: 0, // Remove the elevation (shadow)
+        color: Colors.transparent,
+        elevation: 0,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0), // Adjust horizontal padding as needed
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: ElevatedButton(
                 onPressed: () {
-                  // Add your action when the "Ajukan Sewa" button is pressed
+                  Navigator.pushNamed(context, '/splashproses');
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.lightBlue, // Set the button background color
-                  minimumSize: Size(339, 44), // Set the minimum width and height
+                  primary: Colors.white,
+                  onPrimary: Colors.orange,
+                  minimumSize: const Size(339, 44),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15), // Set the button border radius
+                    borderRadius: BorderRadius.circular(15),
+                    side: const BorderSide(
+                      color: Colors.orange,
+                      width: 3.0,
+                    ),
                   ),
                 ),
                 child: const Text(
                   'Ajukan Sewa',
                   style: TextStyle(
                     fontSize: 20,
-                    color: Colors.white,
+                    color: Colors.orange,
                     fontFamily: 'ComicSansMS',
-                    fontWeight: FontWeight.bold
+                    fontWeight: FontWeight.bold,
                   ),
-                  ),
+                ),
               ),
             ),
           ],
         ),
       ),
 
+      
     );
   }
 }

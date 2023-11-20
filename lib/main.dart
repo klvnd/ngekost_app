@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ngekost_app/splashscreens/splashproses.dart';
 
 import 'splashscreens/splashscreen.dart';
 import 'home.dart';
@@ -24,6 +25,7 @@ class MainApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/splashscreen': (context) => const SplashScreen(),
+        '/splashproses':(context) => const SplashProses(),
         '/home': (context) => const Home(),
         '/login': (context) => const Login(),
         '/signup': (context) => const SignUp(),
