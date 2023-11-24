@@ -312,43 +312,10 @@ class InfoKost extends StatelessWidget {
           ),
           BottomNavigationBar(
             items: <BottomNavigationBarItem>[
-              // BottomNavigationBarItem(
-              //   icon: SizedBox(
-              //     height: 40,
-              //     width: 160,
-              //     child: Container(
-              //       padding: const EdgeInsets.all(10),
-              //       decoration: BoxDecoration(
-              //         border: Border.all(
-              //           color: Colors.orange,
-              //           width: 2,
-              //         ),
-              //         borderRadius: const BorderRadius.all(Radius.circular(5)),
-              //       ),
-              //       child: const Row(
-              //         mainAxisAlignment: MainAxisAlignment.center,
-              //         children: [
-              //           Icon(Icons.chat),
-              //           SizedBox(width: 5), 
-              //           Text(
-              //             'Chat pemilik',
-              //             style: TextStyle(
-              //               fontSize: 12,
-              //               fontFamily: 'ComicSansMS',
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //     ),
-              //   ),
-              //   label: '',
-              // ),
-              
               BottomNavigationBarItem(
                 icon: GestureDetector(
                   onTap: () {
-                    // Navigate to Ajukan Sewa Page when tapped
-                    Navigator.pushNamed(context, '/chatlibrary');
+                    Navigator.pushNamed(context, '/chat');
                   },
                   child: SizedBox(
                     height: 40,

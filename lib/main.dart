@@ -8,6 +8,7 @@ import 'auth/signup.dart';
 import 'splashscreens/splashsignup.dart';
 import 'infokost.dart';
 import 'ajukansewa.dart';
+import 'chat.dart';
 import 'chatlibrary.dart';
 
 void main() {
@@ -32,6 +33,7 @@ class MainApp extends StatelessWidget {
         '/splashsignup':(context) => const SplashSignUp(),
         '/infokost': (context) => const InfoKost(),
         '/ajukansewa': (context) => const AjukanSewa(),
+        '/chat':(context) => const Chat(),
         '/chatlibrary': (context) => const ChatLib(),
       },
     );
