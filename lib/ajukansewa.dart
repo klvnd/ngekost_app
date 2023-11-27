@@ -176,8 +176,6 @@ class AjukanSewa extends StatelessWidget {
           ],
         ),
       ),
-
-      
     );
   }
 }
