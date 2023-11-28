@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 
 class Account extends StatelessWidget {
@@ -52,7 +51,11 @@ class Account extends StatelessWidget {
                     ),
                   ],
                 ),
-                child: const Icon(Icons.star, size: 50),
+                child: Image.asset(
+                  'images/fotoprofil.png',
+                  width: 100,
+                  height: 100,
+                ),
               ),
             ),
             // Your other content here
