@@ -19,9 +19,9 @@ class SignUp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
-              child: Image.asset('images/logo_ngekos.png'),
               height: 130,
               width: 250,
+              child: Image.asset('images/logo_ngekos.png'),
             ),
             const SizedBox(height: 40),
             const Text(
