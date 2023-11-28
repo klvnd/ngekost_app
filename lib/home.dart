@@ -8,7 +8,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int _selectedIndex = 1; // Default selected index is set to 'home'
+  int _selectedIndex = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -43,11 +43,11 @@ class _HomeState extends State<Home> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: '', 
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_circle),
-            label: '', 
+            label: '',
           ),
         ],
         currentIndex: _selectedIndex,
@@ -63,5 +63,17 @@ class _HomeState extends State<Home> {
     setState(() {
       _selectedIndex = index;
     });
+
+    switch (_selectedIndex) {
+      case 0:
+        Navigator.pushNamed(context, '/chatlibrary');
+        break;
+      case 1:
+        // Do nothing or navigate to a different page if needed
+        break;
+      case 2:
+        Navigator.pushNamed(context, '/account');
+        break;
+    }
   }
 }

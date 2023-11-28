@@ -139,7 +139,7 @@ class AjukanSewa extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Colors.transparent,
+        color: Colors.blue[100],
         elevation: 0,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -151,7 +151,7 @@ class AjukanSewa extends StatelessWidget {
                   Navigator.pushNamed(context, '/splashproses');
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.white,
+                  primary: Colors.blue[100],
                   onPrimary: Colors.orange,
                   minimumSize: const Size(339, 44),
                   shape: RoundedRectangleBorder(

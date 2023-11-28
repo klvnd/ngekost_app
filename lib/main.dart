@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ngekost_app/splashscreens/splashproses.dart';
-
 import 'splashscreens/splashscreen.dart';
 import 'home.dart';
 import 'auth/login.dart';
@@ -11,6 +10,7 @@ import 'infokost.dart';
 import 'ajukansewa.dart';
 import 'chat.dart';
 import 'chatlibrary.dart';
+import 'account.dart';
 
 void main() {
   runApp(const MainApp());
@@ -37,6 +37,7 @@ class MainApp extends StatelessWidget {
         '/ajukansewa': (context) => const AjukanSewa(),
         '/chat':(context) => const Chat(),
         '/chatlibrary': (context) => const ChatLib(),
+        '/account': (context) => const Account(),
       },
     );
   }
