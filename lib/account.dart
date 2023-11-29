@@ -41,7 +41,10 @@ class Account extends StatelessWidget {
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: const BorderRadius.only(
+                    bottomLeft: Radius.circular(50),
+                    bottomRight: Radius.circular(50),
+                  ),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey.withOpacity(0.5),
@@ -51,14 +54,135 @@ class Account extends StatelessWidget {
                     ),
                   ],
                 ),
-                child: Image.asset(
-                  'images/fotoprofil.png',
-                  width: 100,
-                  height: 100,
+                height: 150,
+                child: Row(
+                  children: [
+                    Image.asset(
+                      'images/fotoprofil.png',
+                      width: 100,
+                      height: 100,
+                    ),
+                    const SizedBox(width: 16),
+                    const Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Nama User',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 18.0,
+                              fontFamily: 'ComicSansMS',
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            'Mahasiswa',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 13.0,
+                              fontFamily: 'ComicSansMS',
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
-            // Your other content here
+            const SizedBox(height: 30),
+            Padding(
+              padding: const EdgeInsets.only(left: 30),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/rincian');
+                      },
+                      icon: const Icon(
+                        Icons.person,
+                        color: Colors.black,
+                      ),
+                      label: const Text(
+                        'Rincian Akun',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.teal[200],
+                        foregroundColor: Colors.black,
+                      ),
+                    ),
+                    const SizedBox(height: 30),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/chatlibrary');
+                      },
+                      icon: const Icon(
+                        Icons.chat,
+                        color: Colors.black,
+                      ),
+                      label: const Text(
+                        'Chat',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.teal[200],
+                        foregroundColor: Colors.black,
+                      ),
+                    ),
+                    const SizedBox(height: 30),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        // Add your logic for button press here
+                      },
+                      icon: const Icon(
+                        Icons.star,
+                        color: Colors.black,
+                      ),
+                      label: const Text(
+                        'Penilaian',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.teal[200],
+                        foregroundColor: Colors.black,
+                      ),
+                    ),
+                    const SizedBox(height: 30),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        // Add your logic for button press here
+                      },
+                      icon: const Icon(
+                        Icons.delete,
+                        color: Colors.black,
+                      ),
+                      label: const Text(
+                        'Hapus',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.teal[200],
+                        foregroundColor: Colors.black,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
