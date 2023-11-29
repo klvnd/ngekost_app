@@ -122,54 +122,14 @@ class Account extends StatelessWidget {
                     const SizedBox(height: 30),
                     ElevatedButton.icon(
                       onPressed: () {
-                        Navigator.pushNamed(context, '/chatlibrary');
+                        Navigator.pushNamed(context, '/login');
                       },
                       icon: const Icon(
-                        Icons.chat,
+                        Icons.exit_to_app,
                         color: Colors.black,
                       ),
                       label: const Text(
-                        'Chat',
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.teal[200],
-                        foregroundColor: Colors.black,
-                      ),
-                    ),
-                    const SizedBox(height: 30),
-                    ElevatedButton.icon(
-                      onPressed: () {
-                        // Add your logic for button press here
-                      },
-                      icon: const Icon(
-                        Icons.star,
-                        color: Colors.black,
-                      ),
-                      label: const Text(
-                        'Penilaian',
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.teal[200],
-                        foregroundColor: Colors.black,
-                      ),
-                    ),
-                    const SizedBox(height: 30),
-                    ElevatedButton.icon(
-                      onPressed: () {
-                        // Add your logic for button press here
-                      },
-                      icon: const Icon(
-                        Icons.delete,
-                        color: Colors.black,
-                      ),
-                      label: const Text(
-                        'Hapus',
+                        'Log Out',
                         style: TextStyle(
                           color: Colors.black,
                         ),
