@@ -92,97 +92,81 @@ class Rincian extends StatelessWidget {
                 ),
               ),
             ),
-            // const SizedBox(height: 30),
-            // Padding(
-            //   padding: const EdgeInsets.only(left: 30),
-            //   child: Align(
-            //     alignment: Alignment.centerLeft,
-            //     child: Column(
-            //       crossAxisAlignment: CrossAxisAlignment.start,
-            //       children: [
-            //         ElevatedButton.icon(
-            //           onPressed: () {
-            //             // Add your logic for button press here
-            //           },
-            //           icon: const Icon(
-            //             Icons.person,
-            //             color: Colors.black,
-            //           ),
-            //           label: const Text(
-            //             'Rincian Akun',
-            //             style: TextStyle(
-            //               color: Colors.black,
-            //             ),
-            //           ),
-            //           style: ElevatedButton.styleFrom(
-            //             backgroundColor: Colors.teal[200],
-            //             foregroundColor: Colors.black,
-            //           ),
-            //         ),
-            //         const SizedBox(height: 30),
-            //         ElevatedButton.icon(
-            //           onPressed: () {
-            //             // Add your logic for button press here
-            //           },
-            //           icon: const Icon(
-            //             Icons.chat,
-            //             color: Colors.black,
-            //           ),
-            //           label: const Text(
-            //             'Chat',
-            //             style: TextStyle(
-            //               color: Colors.black,
-            //             ),
-            //           ),
-            //           style: ElevatedButton.styleFrom(
-            //             backgroundColor: Colors.teal[200],
-            //             foregroundColor: Colors.black,
-            //           ),
-            //         ),
-            //         const SizedBox(height: 30),
-            //         ElevatedButton.icon(
-            //           onPressed: () {
-            //             // Add your logic for button press here
-            //           },
-            //           icon: const Icon(
-            //             Icons.star,
-            //             color: Colors.black,
-            //           ),
-            //           label: const Text(
-            //             'Penilaian',
-            //             style: TextStyle(
-            //               color: Colors.black,
-            //             ),
-            //           ),
-            //           style: ElevatedButton.styleFrom(
-            //             backgroundColor: Colors.teal[200],
-            //             foregroundColor: Colors.black,
-            //           ),
-            //         ),
-            //         const SizedBox(height: 30),
-            //         ElevatedButton.icon(
-            //           onPressed: () {
-            //             // Add your logic for button press here
-            //           },
-            //           icon: const Icon(
-            //             Icons.delete,
-            //             color: Colors.black,
-            //           ),
-            //           label: const Text(
-            //             'Hapus',
-            //             style: TextStyle(
-            //               color: Colors.black,
-            //             ),
-            //           ),
-            //           style: ElevatedButton.styleFrom(
-            //             backgroundColor: Colors.teal[200],
-            //             foregroundColor: Colors.black,
-            //           ),
-            //         ),
-            //       ],
-            //     ),
-            //   ),
-            // ),
+            const SizedBox(height: 40),
+            const Padding(
+              padding: EdgeInsets.only(left: 40),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Nama Lengkap',
+                      style: TextStyle(
+                        fontSize: 15.0,
+                        fontFamily: 'ComicSansMS',
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      'Slamet kopleng',
+                      style: TextStyle(
+                        fontSize: 11.0,
+                        fontFamily: 'ComicSansMS',
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Text(
+                      'Tempat, Tanggal Lahir',
+                      style: TextStyle(
+                        fontSize: 15.0,
+                        fontFamily: 'ComicSansMS',
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      'Jl. terusan Panama',
+                      style: TextStyle(
+                        fontSize: 11.0,
+                        fontFamily: 'ComicSansMS',
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Text(
+                      'Nomor Handphone',
+                      style: TextStyle(
+                        fontSize: 15.0,
+                        fontFamily: 'ComicSansMS',
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      '089xxxxxxxxx',
+                      style: TextStyle(
+                        fontSize: 11.0,
+                        fontFamily: 'ComicSansMS',
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Text(
+                      'Email',
+                      style: TextStyle(
+                        fontSize: 15.0,
+                        fontFamily: 'ComicSansMS',
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      'World@gmail.com',
+                      style: TextStyle(
+                        fontSize: 11.0,
+                        fontFamily: 'ComicSansMS',
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
