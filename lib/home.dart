@@ -13,7 +13,30 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Home')),
+      appBar: AppBar(
+        backgroundColor: Colors.white.withOpacity(0.5),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(bottom: Radius.circular(20)),
+        ),
+        shadowColor: Colors.black.withOpacity(0.2),
+        leadingWidth: 200,
+        leading: InkWell(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Image.asset('images/logo_ngekos.png'),
+            ],
+          ),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.notifications),
+            color: Colors.black,
+            iconSize: 30,
+          ),
+        ],
+      ),
       body: Container(
         height: double.infinity,
         width: double.infinity,
