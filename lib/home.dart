@@ -119,31 +119,30 @@ class _HomeState extends State<Home> {
                       ),
                     ],
                   ),
-                  child: Row(
-                    children: [
-                      const Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Icon(
-                          Icons.search,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Expanded(
-                        child: TextField(
-                          controller: searchController,
-                          decoration: InputDecoration(
-                            hintText: 'Cari kost disini',
-                            hintStyle: TextStyle(
-                              color: Colors.black.withOpacity(0.5),
-                              fontSize: 16,
-                              fontFamily: 'ComicSansMS',
-                              fontWeight: FontWeight.w400,
-                            ),
-                            border: InputBorder.none,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/search');
+                    },
+                    child: Row(
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Icon(
+                            Icons.search,
+                            color: Colors.black,
                           ),
                         ),
-                      ),
-                    ],
+                        Text(
+                          'cari kost disini',
+                          style: TextStyle(
+                            color: Colors.black.withOpacity(0.5),
+                            fontSize: 14,
+                            fontFamily: 'Comic Sans MS',
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Container(

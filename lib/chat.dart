@@ -19,7 +19,7 @@ class Chat extends StatelessWidget {
                // Set the height of your image as needed
             ),
             const SizedBox(width: 8),
-            Column(
+            const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
@@ -53,7 +53,7 @@ class Chat extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        child: Column(
+        child: const Column(
           children: [
             // Your body content here
           ],
