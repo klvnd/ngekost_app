@@ -93,14 +93,14 @@ class Rincian extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 40),
-            const Padding(
-              padding: EdgeInsets.only(left: 40),
+            Padding(
+              padding: const EdgeInsets.only(left: 40),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       'Nama Lengkap',
                       style: TextStyle(
                         fontSize: 15.0,
@@ -108,47 +108,15 @@ class Rincian extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Text(
+                    const Text(
                       'Slamet kopleng',
                       style: TextStyle(
                         fontSize: 11.0,
                         fontFamily: 'ComicSansMS',
                       ),
                     ),
-                    SizedBox(height: 20),
-                    Text(
-                      'Tempat, Tanggal Lahir',
-                      style: TextStyle(
-                        fontSize: 15.0,
-                        fontFamily: 'ComicSansMS',
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Text(
-                      'Jl. terusan Panama',
-                      style: TextStyle(
-                        fontSize: 11.0,
-                        fontFamily: 'ComicSansMS',
-                      ),
-                    ),
-                    SizedBox(height: 20),
-                    Text(
-                      'Nomor Handphone',
-                      style: TextStyle(
-                        fontSize: 15.0,
-                        fontFamily: 'ComicSansMS',
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Text(
-                      '089xxxxxxxxx',
-                      style: TextStyle(
-                        fontSize: 11.0,
-                        fontFamily: 'ComicSansMS',
-                      ),
-                    ),
-                    SizedBox(height: 20),
-                    Text(
+                    const SizedBox(height: 20),
+                    const Text(
                       'Email',
                       style: TextStyle(
                         fontSize: 15.0,
@@ -156,13 +124,33 @@ class Rincian extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Text(
+                    const Text(
                       'World@gmail.com',
                       style: TextStyle(
                         fontSize: 11.0,
                         fontFamily: 'ComicSansMS',
                       ),
                     ),
+                    const SizedBox(height: 20),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/login');
+                      },
+                      icon: const Icon(
+                        Icons.delete,
+                        color: Colors.black,
+                      ),
+                      label: const Text(
+                        'Delete Account',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.teal[200],
+                        foregroundColor: Colors.black,
+                      ),
+                    )
                   ],
                 ),
               ),

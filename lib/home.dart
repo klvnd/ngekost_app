@@ -236,41 +236,49 @@ class _HomeState extends State<Home> {
                                 image: AssetImage('images/kost1.png'),
                               ),
                               SizedBox(height: 5),
-                              Text(
-                                'Putra',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 14,
-                                  fontFamily: 'ComicSansMS',
-                                ),
-                              ),
-                              Text(
-                                'Kost Salam, Graha Merjosari',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontFamily: 'ComicSansMS',
-                                ),
-                              ),
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.location_on,
-                                    size: 18,
-                                  ),
-                                  Text('Lowokwaru',
+                              Padding(
+                                padding: EdgeInsets.only(left: 8.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Putra',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 14,
+                                        fontFamily: 'ComicSansMS',
+                                      ),
+                                    ),
+                                    Text(
+                                      'Kost Salam, Graha Merjosari',
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        fontFamily: 'ComicSansMS',
+                                      ),
+                                    ),
+                                    Row(
+                                      children: [
+                                        Icon(
+                                          Icons.location_on,
+                                          size: 18,
+                                        ),
+                                        Text('Lowokwaru',
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w600,
+                                              fontFamily: 'ComicSansMS',
+                                            )),
+                                      ],
+                                    ),
+                                    Text(
+                                      'Rp.550.000/bulan',
                                       style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w600,
                                         fontFamily: 'ComicSansMS',
-                                      )),
-                                ],
-                              ),
-                              Text(
-                                'Rp.550.000/bulan',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w600,
-                                  fontFamily: 'ComicSansMS',
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],
@@ -307,43 +315,51 @@ class _HomeState extends State<Home> {
                                 image: AssetImage('images/kost.png'),
                               ),
                               SizedBox(height: 5),
-                              Text(
-                                'Putri',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 14,
-                                  fontFamily: 'ComicSansMS',
-                                ),
-                              ),
-                              Text(
-                                'Kost Izzah, Jl candi Mendut',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontFamily: 'ComicSansMS',
-                                ),
-                              ),
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.location_on,
-                                    size: 18,
-                                  ),
-                                  Text(
-                                    'Blimbing',
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w600,
-                                      fontFamily: 'ComicSansMS',
+                              Padding(
+                                padding: EdgeInsets.only(left: 8.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Putri',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 14,
+                                        fontFamily: 'ComicSansMS',
+                                      ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                              Text(
-                                'Rp.800.000/bulan',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w600,
-                                  fontFamily: 'ComicSansMS',
+                                    Text(
+                                      'Kost Izzah, Jl candi Mendut',
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        fontFamily: 'ComicSansMS',
+                                      ),
+                                    ),
+                                    Row(
+                                      children: [
+                                        Icon(
+                                          Icons.location_on,
+                                          size: 18,
+                                        ),
+                                        Text(
+                                          'Singosari',
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w600,
+                                            fontFamily: 'ComicSansMS',
+                                          )
+                                        ),
+                                      ],
+                                    ),
+                                    Text(
+                                      'Rp.800.000/bulan',
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w600,
+                                        fontFamily: 'ComicSansMS',
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],
