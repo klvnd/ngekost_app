@@ -1,7 +1,55 @@
+import 'dart:convert';
+import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
+
+class User {
+  final String username;
+  final String email;
+  final String password;
+
+  User({
+    required this.username,
+    required this.email,
+    required this.password,
+  });
+
+  Map<String, dynamic> toJson() {
+    return {
+      'username': username,
+      'email': email,
+      'password': password,
+    };
+  }
+}
 
 class SignUp extends StatelessWidget {
-  const SignUp({ Key? key }) : super(key: key);
+  const SignUp({Key? key}) : super(key: key);
+
+  Future<String> get _localPath async {
+    final directory = await getApplicationDocumentsDirectory();
+    return directory.path;
+  }
+
+  Future<File> get _localFile async {
+    final path = await _localPath;
+    return File('$path/user_data.json');
+  }
+
+  Future<void> saveUser(User user) async {
+    final file = await _localFile;
+
+    // Convert the user object to JSON
+    Map<String, dynamic> userData = user.toJson();
+
+    // Convert the JSON data to a string
+    String jsonString = jsonEncode(userData);
+
+    // Write the JSON string to the file
+    await file.writeAsString(jsonString);
+
+    print('User data has been saved to ${file.path}');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +60,7 @@ class SignUp extends StatelessWidget {
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('images/background.jpg'),
-            fit: BoxFit.cover
+            fit: BoxFit.cover,
           ),
         ),
         child: Center(
@@ -47,7 +95,7 @@ class SignUp extends StatelessWidget {
                         color: Colors.grey,
                       ),
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(15))
+                        borderRadius: BorderRadius.all(Radius.circular(15)),
                       ),
                     ),
                   ),
@@ -64,7 +112,7 @@ class SignUp extends StatelessWidget {
                         color: Colors.grey,
                       ),
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(15))
+                        borderRadius: BorderRadius.all(Radius.circular(15)),
                       ),
                     ),
                   ),
@@ -81,7 +129,7 @@ class SignUp extends StatelessWidget {
                         color: Colors.grey,
                       ),
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(15))
+                        borderRadius: BorderRadius.all(Radius.circular(15)),
                       ),
                     ),
                     obscureText: true,
@@ -92,7 +140,18 @@ class SignUp extends StatelessWidget {
                   width: 290,
                   height: 41,
                   child: ElevatedButton(
-                    onPressed: () {
+                    onPressed: () async {
+                      // Create a user object with the entered data
+                      User newUser = User(
+                        username: 'Username', // Replace with the entered username
+                        email: 'email@example.com', // Replace with the entered email
+                        password: 'Password', // Replace with the entered password
+                      );
+
+                      // Save the user data to a JSON file
+                      await saveUser(newUser);
+
+                      // Navigate to the next screen
                       Navigator.pushNamed(context, '/splashsignup');
                     },
                     style: ElevatedButton.styleFrom(
