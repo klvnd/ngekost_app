@@ -1,10 +1,35 @@
 import 'package:flutter/material.dart';
+import 'login_validator.dart';
 
 class Login extends StatelessWidget {
   const Login({ Key? key }) : super(key: key);
 
+  // Function to show an error dialog
+  void _showErrorDialog(BuildContext context, String message) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Error'),
+          content: Text(message),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('OK'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    String username = '';
+    String password = '';
+
     return Scaffold(
       body: Container(
         height: double.infinity,
@@ -34,11 +59,14 @@ class Login extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 30),
-            const SizedBox(
+            SizedBox(
               width: 290,
               height: 59,
               child: TextField(
-                decoration: InputDecoration(
+                onChanged: (value) {
+                  username = value;
+                },
+                decoration: const InputDecoration(
                   hintText: 'Username',
                   hintStyle: TextStyle(
                     fontSize: 24,
@@ -51,11 +79,14 @@ class Login extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const SizedBox(
+            SizedBox(
               width: 290,
               height: 59,
               child: TextField(
-                decoration: InputDecoration(
+                onChanged: (value) {
+                  password = value;
+                },
+                decoration: const InputDecoration(
                   hintText: 'Password',
                   hintStyle: TextStyle(
                     fontSize: 24,
@@ -73,15 +104,18 @@ class Login extends StatelessWidget {
               width: 290,
               height: 41,
               child: ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/home');
+                onPressed: () async {
+                  // Validate credentials
+                  bool isValid =
+                      await LoginValidator.validateCredentials(username, password);
+
+                  if (isValid) {
+                    Navigator.pushNamed(context, '/home');
+                  } else {
+                    // Handle invalid credentials, show an error message
+                    _showErrorDialog(context, 'Invalid credentials. Please check your username and password.');
+                  }
                 },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50),
-                  ),
-                ),
                 child: const Text(
                   'Login',
                   style: TextStyle(
@@ -102,7 +136,7 @@ class Login extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Don't have account",
+                      "Don't have an account",
                       style: TextStyle(
                         fontSize: 14,
                         color: Colors.black,
@@ -123,7 +157,6 @@ class Login extends StatelessWidget {
             ),
           ],
         ),
-        
       ),
     );
   }
