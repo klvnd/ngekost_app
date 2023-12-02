@@ -17,7 +17,7 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     super.initState();
-    Timer.periodic(Duration(seconds: 2), (Timer timer) {
+    Timer.periodic(const Duration(seconds: 2), (Timer timer) {
       if (_currentPage < 2) {
         _currentPage++;
       } else {
@@ -25,7 +25,7 @@ class _HomeState extends State<Home> {
       }
       _pageController.animateToPage(
         _currentPage,
-        duration: Duration(milliseconds: 500),
+        duration: const Duration(milliseconds: 500),
         curve: Curves.easeInOut,
       );
     });
@@ -54,7 +54,9 @@ class _HomeState extends State<Home> {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/notif');
+            },
             icon: const Icon(Icons.notifications),
             color: Colors.black,
             iconSize: 30,

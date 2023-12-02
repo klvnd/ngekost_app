@@ -153,7 +153,7 @@ class AjukanSewa extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   primary: Colors.blue[100],
                   onPrimary: Colors.orange,
-                  minimumSize: const Size(339, 44),
+                  minimumSize: const Size(300, 44),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15),
                     side: const BorderSide(
