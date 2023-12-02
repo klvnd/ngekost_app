@@ -26,7 +26,6 @@ class Search extends StatelessWidget {
           alignment: Alignment.topCenter,
           child: Column(
             children: [
-              //search bar
               Container(
                 width: 365,
                 height: 39,
@@ -65,7 +64,6 @@ class Search extends StatelessWidget {
               ),
               const SizedBox(height: 16.0),
               
-              // Card
               SizedBox(
                 height: 100.0,
                 child: Card(
@@ -103,12 +101,10 @@ class Search extends StatelessWidget {
                                 'kos.nama',
                                 style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                               ),
-                              SizedBox(height: 8.0),
                               Text(
                                 'kos.alamat',
                                 style: TextStyle(fontSize: 14.0),
                               ),
-                              SizedBox(height: 8.0),
                               Text(
                                 'Harga: Rp /bulan',
                                 style: TextStyle(fontSize: 14.0),

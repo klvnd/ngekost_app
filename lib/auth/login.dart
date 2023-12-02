@@ -105,14 +105,12 @@ class Login extends StatelessWidget {
               height: 41,
               child: ElevatedButton(
                 onPressed: () async {
-                  // Validate credentials
                   bool isValid =
                       await LoginValidator.validateCredentials(username, password);
 
                   if (isValid) {
                     Navigator.pushNamed(context, '/home');
                   } else {
-                    // Handle invalid credentials, show an error message
                     _showErrorDialog(context, 'Invalid credentials. Please check your username and password.');
                   }
                 },

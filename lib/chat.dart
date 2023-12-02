@@ -16,7 +16,7 @@ class Chat extends StatelessWidget {
             Image.asset(
               'images/gambarkos.png',
               width: 50, // Set the width of your image as needed
-               // Set the height of your image as needed
+              // Set the height of your image as needed
             ),
             const SizedBox(width: 8),
             const Column(
@@ -47,16 +47,45 @@ class Chat extends StatelessWidget {
         backgroundColor: Colors.white,
       ),
       body: Container(
+        height: double.infinity,
+        width: double.infinity,
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('images/background1.png'),
             fit: BoxFit.cover,
           ),
         ),
-        child: const Column(
-          children: [
-            // Your body content here
-          ],
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'images/WhatsApp_icon.png',
+                width: 150,
+              ),
+              const SizedBox(height: 16),
+              ElevatedButton(
+                onPressed: () {
+                  // Add your button press logic here
+                },
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.green,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  minimumSize: const Size(290, 59),
+                ),
+                child: const Text(
+                  'Chat Via WhatsApp',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
