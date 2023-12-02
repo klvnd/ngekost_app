@@ -13,6 +13,7 @@ import 'chatlibrary.dart';
 import 'account.dart';
 import 'rincian.dart';
 import 'search.dart';
+import 'notification.dart';
 
 void main() {
   runApp(const MainApp());
@@ -42,6 +43,7 @@ class MainApp extends StatelessWidget {
         '/account': (context) => const Account(),
         '/rincian': (context) => const Rincian(),
         '/search': (context) => const Search(),
+        '/notification': (context) => const NotificationPage(),
       },
     );
   }

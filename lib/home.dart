@@ -11,13 +11,13 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _selectedIndex = 1;
   TextEditingController searchController = TextEditingController();
-  PageController _pageController = PageController();
+  final PageController _pageController = PageController();
   int _currentPage = 0;
 
   @override
   void initState() {
     super.initState();
-    Timer.periodic(Duration(seconds: 2), (Timer timer) {
+    Timer.periodic(const Duration(seconds: 2), (Timer timer) {
       if (_currentPage < 2) {
         _currentPage++;
       } else {
@@ -25,7 +25,7 @@ class _HomeState extends State<Home> {
       }
       _pageController.animateToPage(
         _currentPage,
-        duration: Duration(milliseconds: 500),
+        duration: const Duration(milliseconds: 500),
         curve: Curves.easeInOut,
       );
     });
@@ -41,20 +41,24 @@ class _HomeState extends State<Home> {
         ),
         leadingWidth: 200,
         leading: InkWell(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Image.asset(
-                'images/logo_ngekos.png',
-                width: 91,
-                height: 47,
-              ),
-            ],
+          child: Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Image.asset(
+                  'images/logo_ngekos.png',
+                  width: 91,
+                  height: 47,
+                ),
+              ],
+            ),
           ),
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/notification');
+            },
             icon: const Icon(Icons.notifications),
             color: Colors.black,
             iconSize: 30,
