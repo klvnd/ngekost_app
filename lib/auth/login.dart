@@ -116,6 +116,12 @@ class Login extends StatelessWidget {
                     _showErrorDialog(context, 'Invalid credentials. Please check your username and password.');
                   }
                 },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                ),
                 child: const Text(
                   'Login',
                   style: TextStyle(
