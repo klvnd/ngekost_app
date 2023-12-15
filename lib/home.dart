@@ -16,11 +16,11 @@ class _HomeState extends State<Home> {
   int _currentPage = 0;
 
   List<Kos> listKos = [
-    Kos(nama: 'Putra', alamat: 'Kost Salam, Graha Merjosari Indah, Lowokwaru', harga: 550000, imageUrl: 'images/kos1.jpeg'),
-    Kos(nama: 'Putri', alamat: 'Kost Juta, Jl Siguragura No8, Sumbersari, Lowokwaru', harga: 850000, imageUrl: 'images/kos2.jpeg'),
-    Kos(nama: 'Putri', alamat: 'Kost Venxia, Jl Siguragura No6A, Sumbersari, Lowokwaru', harga: 800000, imageUrl: 'images/kos3.jpeg'),
-    Kos(nama: 'Campur', alamat: 'Kost Oscar, Jl Mayjen Haryono No.193, Dinoyo, Lowokwaru', harga: 750000, imageUrl: 'images/kos4.jpeg'),
-    Kos(nama: 'Putri', alamat: 'Kost Elsaa, Gang 4, Bandulan, Sukun', harga: 650000, imageUrl: 'images/kos5.jpeg'),
+    Kos(nama: 'Putra', alamat: 'Kost Salam, Graha Merjosari Indah, Lowokwaru', harga: 550000, imageUrl: 'images/kost.png'),
+    Kos(nama: 'Putri', alamat: 'Kost Juta, Jl Siguragura No8, Sumbersari, Lowokwaru', harga: 850000, imageUrl: 'images/kost1.png'),
+    Kos(nama: 'Putri', alamat: 'Kost Venxia, Jl Siguragura No6A, Sumbersari, Lowokwaru', harga: 800000, imageUrl: 'images/kost2.png'),
+    Kos(nama: 'Campur', alamat: 'Kost Oscar, Jl Mayjen Haryono No.193, Dinoyo, Lowokwaru', harga: 750000, imageUrl: 'images/kost.png'),
+    Kos(nama: 'Putri', alamat: 'Kost Elsaa, Gang 4, Bandulan, Sukun', harga: 650000, imageUrl: 'images/kost1.png'),
   ];
 
   @override
