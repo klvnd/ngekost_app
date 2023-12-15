@@ -249,8 +249,12 @@ class _HomeState extends State<Home> {
     );
   }
 
-  Widget _buildKosCard(Kos kos) {
-    return Card(
+Widget _buildKosCard(Kos kos) {
+  return GestureDetector(
+    onTap: () {
+      Navigator.pushNamed(context, '/infokost');
+    },
+    child: Card(
       margin: const EdgeInsets.all(8.0),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
@@ -301,8 +305,10 @@ class _HomeState extends State<Home> {
           ),
         ],
       ),
-    );
-  }
+    ),
+  );
+}
+
 
   void _onItemTapped(int index) {
     setState(() {
