@@ -12,6 +12,31 @@
     {
         "username": "kelvin",
         "email": "klvinnd@gmail.com",
-        "password": "kelvin"
+        "password": "kelvin123"
+    },
+    {
+        "username": "anto",
+        "email": "anto@gmail.com",
+        "password": "anto123"
+    },
+    {
+        "username": "dafiq",
+        "email": "dafiq@gmail.com",
+        "password": "dafiq123"
+    },
+    {
+        "username": "jenika",
+        "email": "jenika@gmail.com",
+        "password": "jenika123"
+    },
+    {
+        "username": "jang",
+        "email": "jang@gmail.com",
+        "password": "jang123"
+    },
+    {
+        "username": "silvi",
+        "email": "silvi@gmail.com",
+        "password": "silvi123"
     }
 ]
