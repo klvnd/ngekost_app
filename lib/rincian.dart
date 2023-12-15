@@ -93,14 +93,14 @@ class Rincian extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 40),
-            Padding(
-              padding: const EdgeInsets.only(left: 40),
+            const Padding(
+              padding: EdgeInsets.only(left: 40),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       'Nama Lengkap',
                       style: TextStyle(
                         fontSize: 15.0,
@@ -108,15 +108,15 @@ class Rincian extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const Text(
+                    Text(
                       'Slamet kopleng',
                       style: TextStyle(
                         fontSize: 11.0,
                         fontFamily: 'ComicSansMS',
                       ),
                     ),
-                    const SizedBox(height: 20),
-                    const Text(
+                    SizedBox(height: 20),
+                    Text(
                       'Email',
                       style: TextStyle(
                         fontSize: 15.0,
@@ -124,33 +124,33 @@ class Rincian extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const Text(
+                    Text(
                       'World@gmail.com',
                       style: TextStyle(
                         fontSize: 11.0,
                         fontFamily: 'ComicSansMS',
                       ),
                     ),
-                    const SizedBox(height: 20),
-                    ElevatedButton.icon(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/login');
-                      },
-                      icon: const Icon(
-                        Icons.delete,
-                        color: Colors.black,
-                      ),
-                      label: const Text(
-                        'Delete Account',
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.teal[200],
-                        foregroundColor: Colors.black,
-                      ),
-                    )
+                    SizedBox(height: 20),
+                    // ElevatedButton.icon(
+                    //   onPressed: () {
+                    //     Navigator.pushNamed(context, '/login');
+                    //   },
+                    //   icon: const Icon(
+                    //     Icons.delete,
+                    //     color: Colors.black,
+                    //   ),
+                    //   label: const Text(
+                    //     'Delete Account',
+                    //     style: TextStyle(
+                    //       color: Colors.black,
+                    //     ),
+                    //   ),
+                    //   style: ElevatedButton.styleFrom(
+                    //     backgroundColor: Colors.teal[200],
+                    //     foregroundColor: Colors.black,
+                    //   ),
+                    // )
                   ],
                 ),
               ),
