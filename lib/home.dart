@@ -72,308 +72,312 @@ class _HomeState extends State<Home> {
             fit: BoxFit.cover,
           ),
         ),
-        child: Column(
-          children: [
-            const SizedBox(height: 15),
-            Column(
+        child: Center(
+          child: SingleChildScrollView(
+            child: Column(
               children: [
-                SizedBox(
-                  width: 350,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text(
-                        'Terima Inpo Kost',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'ComicSansMS',
-                        ),
-                      ),
-                      Image.asset(
-                        'images/logo_rumah.png',
-                        width: 110,
-                        height: 46,
-                      ),
-                    ],
-                  ),
-                ),
-                const Text(
-                  'Cari Mudah, Harga Bersahabat',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontFamily: 'ComicSansMS',
-                  ),
-                ),
                 const SizedBox(height: 15),
-                Container(
-                  width: 365,
-                  height: 39,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.5),
-                        spreadRadius: 0,
-                        blurRadius: 4,
-                        offset: const Offset(0, 4),
-                      ),
-                    ],
-                  ),
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.pushNamed(context, '/search');
-                    },
-                    child: Row(
-                      children: [
-                        const Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Icon(
-                            Icons.search,
-                            color: Colors.black,
+                Column(
+                  children: [
+                    SizedBox(
+                      width: 350,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            'Terima Inpo Kost',
+                            style: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'ComicSansMS',
+                            ),
                           ),
-                        ),
-                        Text(
-                          'cari kost disini',
-                          style: TextStyle(
+                          Image.asset(
+                            'images/logo_rumah.png',
+                            width: 110,
+                            height: 46,
+                          ),
+                        ],
+                      ),
+                    ),
+                    const Text(
+                      'Cari Mudah, Harga Bersahabat',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontFamily: 'ComicSansMS',
+                      ),
+                    ),
+                    const SizedBox(height: 15),
+                    Container(
+                      width: 365,
+                      height: 39,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
                             color: Colors.black.withOpacity(0.5),
-                            fontSize: 14,
-                            fontFamily: 'Comic Sans MS',
-                            fontWeight: FontWeight.w400,
+                            spreadRadius: 0,
+                            blurRadius: 4,
+                            offset: const Offset(0, 4),
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.symmetric(vertical: 15),
-                  width: 287,
-                  height: 170,
-                  child: PageView.builder(
-                    controller: _pageController,
-                    scrollDirection: Axis.horizontal,
-                    itemCount: 3, // Number of images
-                    itemBuilder: (context, index) {
-                      List<String> imagePaths = [
-                        'images/kost.png',
-                        'images/kost1.png',
-                        'images/kost2.png',
-                      ];
-                      return Container(
-                        margin: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          image: DecorationImage(
-                            image: AssetImage(imagePaths[index]),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      );
-                    },
-                  ),
-                ),
-                Container(
-                  width: double.infinity,
-                  height: 36,
-                  decoration: const BoxDecoration(
-                    color: Color.fromARGB(225, 241, 236, 236),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color(0x3F000000),
-                        blurRadius: 2,
-                        offset: Offset(0, 4),
-                        spreadRadius: 0,
+                        ],
                       ),
-                    ],
-                  ),
-                  child: const Align(
-                    alignment: Alignment.centerLeft,
-                    child: Padding(
-                      padding: EdgeInsets.only(left: 8.0),
-                      child: Text(
-                        'Rekomendasi Kost',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 28,
-                          fontFamily: 'ComicSansMS',
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.symmetric(vertical: 30),
-                  width: 370,
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 183,
-                        width: 180,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.5),
-                              spreadRadius: 0,
-                              blurRadius: 4,
-                              offset: const Offset(0, 4),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/search');
+                        },
+                        child: Row(
+                          children: [
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Icon(
+                                Icons.search,
+                                color: Colors.black,
+                              ),
+                            ),
+                            Text(
+                              'cari kost disini',
+                              style: TextStyle(
+                                color: Colors.black.withOpacity(0.5),
+                                fontSize: 14,
+                                fontFamily: 'Comic Sans MS',
+                                fontWeight: FontWeight.w400,
+                              ),
                             ),
                           ],
                         ),
-                        child: GestureDetector(
-                          onTap: () {
-                            Navigator.pushNamed(context, '/infokost');
-                          },
-                          child: const Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Image(
-                                height: 101,
-                                width: 180,
-                                image: AssetImage('images/kost1.png'),
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(vertical: 15),
+                      width: 287,
+                      height: 170,
+                      child: PageView.builder(
+                        controller: _pageController,
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 3, // Number of images
+                        itemBuilder: (context, index) {
+                          List<String> imagePaths = [
+                            'images/kost.png',
+                            'images/kost1.png',
+                            'images/kost2.png',
+                          ];
+                          return Container(
+                            margin: const EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              image: DecorationImage(
+                                image: AssetImage(imagePaths[index]),
+                                fit: BoxFit.cover,
                               ),
-                              SizedBox(height: 5),
-                              Padding(
-                                padding: EdgeInsets.only(left: 8.0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Putra',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 14,
-                                        fontFamily: 'ComicSansMS',
-                                      ),
-                                    ),
-                                    Text(
-                                      'Kost Salam, Graha Merjosari',
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        fontFamily: 'ComicSansMS',
-                                      ),
-                                    ),
-                                    Row(
-                                      children: [
-                                        Icon(
-                                          Icons.location_on,
-                                          size: 18,
-                                        ),
-                                        Text('Lowokwaru',
-                                            style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w600,
-                                              fontFamily: 'ComicSansMS',
-                                            )),
-                                      ],
-                                    ),
-                                    Text(
-                                      'Rp.550.000/bulan',
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w600,
-                                        fontFamily: 'ComicSansMS',
-                                      ),
-                                    ),
-                                  ],
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                    Container(
+                      width: double.infinity,
+                      height: 36,
+                      decoration: const BoxDecoration(
+                        color: Color.fromARGB(225, 241, 236, 236),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Color(0x3F000000),
+                            blurRadius: 2,
+                            offset: Offset(0, 4),
+                            spreadRadius: 0,
+                          ),
+                        ],
+                      ),
+                      child: const Align(
+                        alignment: Alignment.centerLeft,
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 8.0),
+                          child: Text(
+                            'Rekomendasi Kost',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 28,
+                              fontFamily: 'ComicSansMS',
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(vertical: 30),
+                      width: 370,
+                      child: Row(
+                        children: [
+                          Container(
+                            height: 183,
+                            width: 180,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.5),
+                                  spreadRadius: 0,
+                                  blurRadius: 4,
+                                  offset: const Offset(0, 4),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      const Padding(padding: EdgeInsets.symmetric(horizontal: 5)),
-                      Container(
-                        height: 183,
-                        width: 180,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.5),
-                              spreadRadius: 0,
-                              blurRadius: 4,
-                              offset: const Offset(0, 4),
+                              ],
                             ),
-                          ],
-                        ),
-                        child: GestureDetector(
-                          onTap: () {
-                            Navigator.pushNamed(context, '/infokost');
-                          },
-                          child: const Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Image(
-                                height: 101,
-                                width: 180,
-                                image: AssetImage('images/kost.png'),
-                              ),
-                              SizedBox(height: 5),
-                              Padding(
-                                padding: EdgeInsets.only(left: 8.0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Putri',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 14,
-                                        fontFamily: 'ComicSansMS',
-                                      ),
-                                    ),
-                                    Text(
-                                      'Kost Izzah, Jl candi Mendut',
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        fontFamily: 'ComicSansMS',
-                                      ),
-                                    ),
-                                    Row(
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/infokost');
+                              },
+                              child: const Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Image(
+                                    height: 101,
+                                    width: 180,
+                                    image: AssetImage('images/kost1.png'),
+                                  ),
+                                  SizedBox(height: 5),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 8.0),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        Icon(
-                                          Icons.location_on,
-                                          size: 18,
+                                        Text(
+                                          'Putra',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 14,
+                                            fontFamily: 'ComicSansMS',
+                                          ),
                                         ),
                                         Text(
-                                          'Singosari',
+                                          'Kost Salam, Graha Merjosari',
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            fontFamily: 'ComicSansMS',
+                                          ),
+                                        ),
+                                        Row(
+                                          children: [
+                                            Icon(
+                                              Icons.location_on,
+                                              size: 18,
+                                            ),
+                                            Text('Lowokwaru',
+                                                style: TextStyle(
+                                                  fontSize: 12,
+                                                  fontWeight: FontWeight.w600,
+                                                  fontFamily: 'ComicSansMS',
+                                                )),
+                                          ],
+                                        ),
+                                        Text(
+                                          'Rp.550.000/bulan',
                                           style: TextStyle(
                                             fontSize: 12,
                                             fontWeight: FontWeight.w600,
                                             fontFamily: 'ComicSansMS',
-                                          )
+                                          ),
                                         ),
                                       ],
                                     ),
-                                    Text(
-                                      'Rp.800.000/bulan',
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w600,
-                                        fontFamily: 'ComicSansMS',
-                                      ),
-                                    ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
-                            ],
+                            ),
                           ),
-                        ),
+                          const Padding(padding: EdgeInsets.symmetric(horizontal: 5)),
+                          Container(
+                            height: 183,
+                            width: 180,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.5),
+                                  spreadRadius: 0,
+                                  blurRadius: 4,
+                                  offset: const Offset(0, 4),
+                                ),
+                              ],
+                            ),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/infokost');
+                              },
+                              child: const Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Image(
+                                    height: 101,
+                                    width: 180,
+                                    image: AssetImage('images/kost.png'),
+                                  ),
+                                  SizedBox(height: 5),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 8.0),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Putri',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 14,
+                                            fontFamily: 'ComicSansMS',
+                                          ),
+                                        ),
+                                        Text(
+                                          'Kost Izzah, Jl candi Mendut',
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            fontFamily: 'ComicSansMS',
+                                          ),
+                                        ),
+                                        Row(
+                                          children: [
+                                            Icon(
+                                              Icons.location_on,
+                                              size: 18,
+                                            ),
+                                            Text(
+                                              'Singosari',
+                                              style: TextStyle(
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w600,
+                                                fontFamily: 'ComicSansMS',
+                                              )
+                                            ),
+                                          ],
+                                        ),
+                                        Text(
+                                          'Rp.800.000/bulan',
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w600,
+                                            fontFamily: 'ComicSansMS',
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                ),
+                    ),
+                  ],
+                )
               ],
-            )
-          ],
+            ),
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
