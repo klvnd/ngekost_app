@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ChatLib extends StatelessWidget { 
-  const ChatLib({ Key? key }) : super(key: key); 
+class Order extends StatelessWidget { 
+  const Order({ Key? key }) : super(key: key); 
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +10,7 @@ class ChatLib extends StatelessWidget {
         leading: const BackButton(color: Colors.black),
         backgroundColor: Colors.white,
         title: const Text(
-          'Chat',
+          'Saved Order',
           style: TextStyle(
             color: Colors.black,
             fontSize: 20.0,
@@ -37,15 +37,15 @@ class ChatLib extends StatelessWidget {
             children: <Widget>[
               Image(image: AssetImage('images/nochat.png'), width: 298.0, height: 254.0),
               SizedBox(height: 40.0,),
-              Text(
-                'Tidak ada perakapan pada saat ini',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 16,
-                  fontFamily: 'ComicSansMS',
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              // Text(
+              //   'Tidak ada perakapan pada saat ini',
+              //   style: TextStyle(
+              //     color: Colors.black,
+              //     fontSize: 16,
+              //     fontFamily: 'ComicSansMS',
+              //     fontWeight: FontWeight.bold,
+              //   ),
+              // ),
             ],
           ),
         ),

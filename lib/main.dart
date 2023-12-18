@@ -9,7 +9,7 @@ import 'splashscreens/splashpesanan.dart';
 import 'infokost.dart';
 import 'ajukansewa.dart';
 import 'chat.dart';
-import 'chatlibrary.dart';
+import 'order.dart';
 import 'account.dart';
 import 'rincian.dart';
 import 'search.dart';
@@ -39,7 +39,7 @@ class MainApp extends StatelessWidget {
         '/infokost': (context) => const InfoKost(),
         '/ajukansewa': (context) => const AjukanSewa(),
         '/chat':(context) => const Chat(),
-        '/chatlibrary': (context) => const ChatLib(),
+        '/order': (context) => const Order(),
         '/account': (context) => const Account(),
         '/rincian': (context) => const Rincian(),
         '/search': (context) => const Search(),

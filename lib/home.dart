@@ -61,16 +61,16 @@ class _HomeState extends State<Home> {
             ],
           ),
         ),
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/notif');
-            },
-            icon: const Icon(Icons.notifications),
-            color: Colors.black,
-            iconSize: 30,
-          ),
-        ],
+        // actions: [
+        //   IconButton(
+        //     onPressed: () {
+        //       Navigator.pushNamed(context, '/notif');
+        //     },
+        //     icon: const Icon(Icons.notifications),
+        //     color: Colors.black,
+        //     iconSize: 30,
+        //   ),
+        // ],
       ),
       body: Container(
         height: double.infinity,
@@ -228,7 +228,9 @@ class _HomeState extends State<Home> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.chat),
+                    //     icon: const Icon(Icons.notifications),
+
+            icon: Icon(Icons.bookmark),
             label: '',
           ),
           BottomNavigationBarItem(
@@ -260,7 +262,7 @@ Widget _buildKosCard(Kos kos) {
         borderRadius: BorderRadius.circular(10.0),
         side: const BorderSide(color: Colors.black),
       ),
-      color: const Color.fromARGB(97, 255, 255, 255),
+      // color: const Color.fromARGB(97, 255, 255, 255),
       child: Row(
         children: [
           Expanded(
@@ -317,7 +319,7 @@ Widget _buildKosCard(Kos kos) {
 
     switch (_selectedIndex) {
       case 0:
-        Navigator.pushNamed(context, '/chatlibrary');
+        Navigator.pushNamed(context, '/order');
         break;
       case 1:
         // Do nothing or navigate to a different page if needed
