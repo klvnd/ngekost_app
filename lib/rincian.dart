@@ -109,7 +109,7 @@ class Rincian extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'Slamet kopleng',
+                      'Naila Azzahra',
                       style: TextStyle(
                         fontSize: 11.0,
                         fontFamily: 'ComicSansMS',
@@ -125,7 +125,7 @@ class Rincian extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'World@gmail.com',
+                      'naila@gmail.com',
                       style: TextStyle(
                         fontSize: 11.0,
                         fontFamily: 'ComicSansMS',
